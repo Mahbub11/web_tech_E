@@ -20,22 +20,6 @@ return $rows;
    
 }
 
-function showStudent($id){
-	$conn = db_conn();
-	$selectQuery = "SELECT * FROM `products` where ID = ?";
-
-    try {
-        $stmt = $conn->prepare($selectQuery);
-        $stmt->execute([$id]);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    return $row;
-}
-
-
 function addProduct($data){
 	$conn = db_conn();
     $selectQuery = "INSERT into products (name, buying_price,selling_price, visiablity)
