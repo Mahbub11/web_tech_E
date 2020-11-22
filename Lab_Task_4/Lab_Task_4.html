@@ -1,19 +1,49 @@
 <!Doctype html>
+
+<?php
+if(isset($_POST['submit']})){
+
+  setcookie('name',$POST['user'],time()+60*60*60*24)
+
+}
+<?
+
 <html>
 <head>
 <title></title>
+  
+  
+<style>
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+
+header{
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+</style>
 
 </head>
 <body>
 
+  <header>
+  <h2> Welcome............</h2>
+</header>
 <body style="background-color:white;">
 <h1 style="text-align:center;">Welcome </h1>
-<img src="download.jpg"" width="604" height="380">
+<img src="pp.jpg"" width="604" height="380">
 <p style="font-size:150%;">Once again Welcome</p>
 
 <div class="col-lg-6">
 <h2>Registration Form</h2>
-<form action="validation php" method"post">
+<form action="" method"post">
 <div class=form-group>
 <label>Name</label>
 <input type="text" name="user" class="form-control">
@@ -79,7 +109,7 @@
 
 <div class=form-group>
 <h3 style="text align:center;">Profile</h3>
-<img src="download.png"" width="150" height="100"><br>
+<img src="pp.png"" width="150" height="100"><br>
 <input class="form-control" type="file" name ="file"><br>
 
 <label>Name:</label>
@@ -134,6 +164,10 @@
 </div>
 </div>
 </div>
+    <footer>
+  <h5>Copyright 2005</h5>
+ 
+</footer>
 
 </body>
 <html>
