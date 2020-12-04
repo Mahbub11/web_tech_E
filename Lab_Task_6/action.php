@@ -10,11 +10,11 @@ if(isset($_POST["login_submit"])){
     $sql="SELECT * FROM `users` WHERE `email`='$email' AND `password`='$pass'";
     $q = $db->query($sql);
     $row=$q -> fetch_assoc();
-    $_SESSION["id"]=1;
+    $_SESSION["id"]=$row["id"];
 
     if(isset($_POST["remember"])){
-      $cookie_name = "uid";
-      $cookie_value = 1;
+      $cookie_name = "uiid";
+      $cookie_value = $row["id"];
      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
     }
     header("location:homepage.php");
